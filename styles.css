@@ -1,0 +1,61 @@
+.faceted-search {
+  padding: 0 0 15px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.faceted-search input {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #666;
+}
+
+.faceted-search input:focus {
+  outline: none;
+  background-color: #fafafa;
+}
+
+.faceted-search .results {
+  border: 1px solid #666;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  margin-top: -16px;
+  box-shadow: 0 2px 2px #666;
+}
+..faceted-search results[count="0"] {
+  display: none;
+}
+
+.faceted-search .score {
+  font-size: 0.85rem;
+  position: absolute;
+  top: 2;
+  right: 4;
+}
+
+.faceted-search .results > div {
+  position: relative;
+  padding: 10px;
+
+  font-family: monospace;
+  overflow: hidden;
+  font-size: 0.85rem;
+  text-overflow: ellipsis;
+}
+
+.faceted-search .results > div:hover {
+  background-color: #fafafa;
+}
+
+.faceted-search .results > .focused,
+.faceted-search .results > .focused:hover {
+  background-color: #eee;
+}
+
+.faceted-search .results > div + div {
+  border-top: 1px solid #666;
+}
+
+
