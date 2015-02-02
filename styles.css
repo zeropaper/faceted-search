@@ -24,7 +24,7 @@
   margin-top: -16px;
   box-shadow: 0 2px 2px #666;
 }
-..faceted-search results[count="0"] {
+.faceted-search .results[count="0"] {
   display: none;
 }
 
