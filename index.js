@@ -61,14 +61,13 @@ module.exports = View.extend({
   initialize: function (options) {
     options = options || {};
     this.results = new SearchResults();
-    this.prepareResult = options.prepareResult || function () {};
+    this.prepareResult = options.prepareResult || function (obj) { return obj; };
   },
 
   searchKeydown: function (evt) {
     if (evt.keyCode === 13) {
       if (this.results.length) {
-        var href = this.results.at(this.results.indexPos).value;
-        location.href = href;
+        location.href = this.results.at(this.results.indexPos).value;
       }
       evt.preventDefault();
     }
@@ -133,11 +132,10 @@ module.exports = View.extend({
         }
       });
 
-      if (score) {
+      if (score > 0) {
         found.push(prepare({
           score: score,
-          label: model.filepath,
-          value: model.fileurl
+          model: model
         }));
       }
     });
