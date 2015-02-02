@@ -1,6 +1,6 @@
 {
   "name": "faceted-search",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A AmpersandJS set of tools to provide faceted search.",
   "main": "index.js",
   "scripts": {
